@@ -1,0 +1,28 @@
+# =============================================================================
+# AMA-System Market Intelligence — Backend Dependencies
+# =============================================================================
+
+# Web framework
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+python-multipart>=0.0.12          # Required for file upload (UploadFile)
+
+# Config
+python-dotenv>=1.0.0
+
+# CV parsing (legacy MVP)
+pypdf>=5.0.0
+python-docx>=1.1.0
+
+# Validation
+pydantic>=2.0.0
+
+# ── Market Intelligence Phase ─────────────────────────────────────────────
+httpx>=0.28.0                     # Async HTTP client (cần cho Gemini/Tavily nếu dùng async)
+google-generativeai>=0.8.0        # Gemini 2.0 Flash API
+tavily-python>=0.5.0              # Tavily web search API
+
+# --- Phase 3+ (uncomment when implementing) ---
+# sqlalchemy>=2.0.0               # PostgreSQL ORM
+# asyncpg>=0.30.0                 # Async PostgreSQL driver
+# chromadb>=0.5.0                 # Vector database
